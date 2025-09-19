@@ -413,7 +413,7 @@
   <p class="subscribe-title">Subscribe</p>
   <form class="subscribe-form">
     <label class="subscribe-label">
-    <input type="email" placeholder="E-mail" class="subscribe-input" required></label>
+    <input type="email"  name="user-email"  placeholder="E-mail" class="subscribe-input" required></label>
     <button type="submit" class="subscribe-button">
       Subscribe
        <svg class="icon-send" width="24" height="24">
@@ -435,7 +435,7 @@
       </svg>
     </button>
 
-    <h2 class="modal-title">Leave your contacts and we will call you back</h2>
+    <p class="modal-title">Leave your contacts and we will call you back</p>
 
     <form class="modal-form">
     
@@ -446,6 +446,7 @@
             class="modal-input"
             type="text"
             name="username"
+            id="user-name"
             placeholder=""
             required
           />
@@ -463,6 +464,7 @@
             class="modal-input"
             type="tel"
             name="userphone"
+             id="user-phone"
             placeholder=""
             required
           />
@@ -479,6 +481,7 @@
             class="modal-input"
             type="email"
             name="useremail"
+             id="user-email"
             placeholder=""
             required
           />
@@ -506,7 +509,7 @@
         </label>
       </div>
 
-      <button type="submit" class="modal-submit">Send</button>
+      <button type="submit" class="modal-submit">Send<svg class="submit-icon" width="8" height="8"></svg></button>
     </form>
   </div>
 </div>

@@ -722,6 +722,15 @@ p.footer-text {
   text-align: center;
   margin-bottom: 16px;
 }
+.modal-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2E2F42;
+  margin-bottom: 16px;
+}
 
 
 .modal-form {
@@ -843,8 +852,8 @@ p.footer-text {
   transition: border 250ms cubic-bezier(0.4,0,0.2,1), background-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
-
 .modal-submit {
+  border: 1px solid rgba(0, 0, 0, 0.1);
   display: block;
   min-width: 169px;
   height: 56px;
@@ -855,15 +864,24 @@ p.footer-text {
   font-weight: 500;
   color: #fff;
   background-color: #4D5AE5;
-  border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1), border 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
-.modal-submit:hover {
+.modal-submit:hover,
+.modal-submit:focus {
   background-color: #404bbf;
+  border-color: #404bbf; 
 }
+.submit-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit:hover .submit-icon,
+.modal-submit:focus .submit-icon {
+  fill: #ffffff; }
+
 
 
 
