@@ -635,7 +635,6 @@ p.footer-text {
 }
 
 /*--- Modal overlay ---*/
-
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
@@ -658,7 +657,6 @@ p.footer-text {
   visibility: visible;
 }
 
-
 .modal {
   position: absolute;
   top: 50%;
@@ -676,8 +674,6 @@ p.footer-text {
   flex-direction: column;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 .modal-close {
   position: absolute;
   top: 24px;
@@ -695,10 +691,9 @@ p.footer-text {
   justify-content: center;
 
   cursor: pointer;
-  color: #2e2f42;
-
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1),
-              border 250ms cubic-bezier(0.4,0,0.2,1);
+color: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
+   border: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
 .modal-close:hover,
@@ -707,9 +702,14 @@ p.footer-text {
   color: #ffffff;
 }
 
-
 .modal-close-icon {
+  fill: #2e2f42;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+  fill: #ffffff;
 }
 
 
@@ -718,34 +718,16 @@ p.footer-text {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #2E2F42;
+  color: #2e2f42;
   text-align: center;
   margin-bottom: 16px;
 }
-.modal-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2E2F42;
-  margin-bottom: 16px;
-}
-
 
 .modal-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
-
-.modal-comment {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-
 
 .modal-label {
   font-size: 12px;
@@ -756,20 +738,9 @@ p.footer-text {
   margin-bottom: 4px;
 }
 
-
 .input-wrapper {
   position: relative;
 }
-
-.input-wrapper:hover .modal-input,
-.input-wrapper:focus-within .modal-input {
-  border-color: #4D5AE5;
-}
-
-.input-wrapper:hover .modal-input-icon,
-.input-wrapper:focus-within .modal-input-icon {
-  fill: #4D5AE5;}
-
 
 .modal-input {
   width: 100%;
@@ -786,9 +757,25 @@ p.footer-text {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-inputs:hover ,
-.modal-form-inputs:focus-within {
-  border-color: #4D5AE5;
+.modal-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 24px;
+  fill: rgba(46, 47, 66, 0.4);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-wrapper:hover .modal-input,
+.input-wrapper:focus-within .modal-input {
+  border-color: #4d5ae5;
+}
+
+.input-wrapper:hover .modal-input-icon,
+.input-wrapper:focus-within .modal-input-icon {
+  fill: #4d5ae5;
 }
 
 .modal-textarea {
@@ -807,27 +794,22 @@ p.footer-text {
   transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
   margin-bottom: 16px;
 }
-
+.modal-textarea:hover,
 .modal-textarea:focus {
-  border-color: #4D5AE5;
-  
+  border-color: #4d5ae5;
 }
 
-
-.modal-input-icon {
+.visually-hidden {
   position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 24px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  fill: rgba(46, 47, 66, 0.4);
-}
-
-.modal-input:focus + .modal-input-icon,
-.modal-input:hover + .modal-input-icon {
-  fill: #4D5AE5;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -852,8 +834,18 @@ p.footer-text {
   transition: border 250ms cubic-bezier(0.4,0,0.2,1), background-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
+.visually-hidden:checked + .checkbox-span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+.policy-link {
+  color: #4d5ae5;
+}
+
 .modal-submit {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: none;
   display: block;
   min-width: 169px;
   height: 56px;
@@ -863,27 +855,25 @@ p.footer-text {
   letter-spacing: 0.04em;
   font-weight: 500;
   color: #fff;
-  background-color: #4D5AE5;
+  background-color: #4d5ae5;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1), border 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .modal-submit:hover,
 .modal-submit:focus {
   background-color: #404bbf;
-  border-color: #404bbf; 
 }
+
 .submit-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit:hover .submit-icon,
 .modal-submit:focus .submit-icon {
-  fill: #ffffff; }
-
-
-
+  fill: #ffffff;
+}
 
 /* ===== VISUALLY HIDDEN ====== */
 .visually-hidden {
