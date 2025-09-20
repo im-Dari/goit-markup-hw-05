@@ -729,7 +729,7 @@ color: #2e2f42;
 }
 
 .modal-field { 
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-form {
@@ -773,8 +773,9 @@ color: #2e2f42;
   transform: translateY(-50%);
   width: 18px;
   height: 24px;
+  transition: fill 250ms cubic-bezier(0.4,0,0.2,1);
   fill: #2e2f42
-   transition: fill 250ms cubic-bezier(0.4,0,0.2,1);
+ 
 }
 
 .input-wrapper:hover .modal-input,
@@ -800,7 +801,7 @@ color: #2e2f42;
   color: rgba(46, 47, 66, 0.4);
   resize: none;
   outline: transparent;
-  transition: fill 250ms cubic-bezier(0.4,0,0.2,1);
+ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 16px;
 }
 .modal-textarea:hover,
@@ -819,6 +820,7 @@ color: #2e2f42;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .modal-checkbox {
@@ -859,7 +861,6 @@ color: #2e2f42;
 
 
 .checkbox-span {
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -867,6 +868,7 @@ color: #2e2f42;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   fill: transparent; 
+  display: inline-flex;
   transition: background-color 250ms cubic-bezier(0.4,0,0.2,1),
               border 250ms cubic-bezier(0.4,0,0.2,1),
               fill 250ms cubic-bezier(0.4,0,0.2,1);
