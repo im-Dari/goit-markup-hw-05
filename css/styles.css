@@ -729,7 +729,7 @@ color: #2e2f42;
 }
 
 .modal-field { 
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-form {
@@ -786,6 +786,9 @@ color: #2e2f42;
 .input-wrapper:hover .modal-input-icon,
 .input-wrapper:focus-within .modal-input-icon {
   fill: #4d5ae5;
+}
+.modal-comment {
+  margin-bottom: 24px;
 }
 
 .modal-textarea {
@@ -861,7 +864,7 @@ color: #2e2f42;
 
 
 .checkbox-span {
-   display: inline-flex; 
+  display: inline-flex;
    align-items: center;
   justify-content: center;
   width: 16px;
@@ -909,7 +912,6 @@ color: #2e2f42;
 
 .modal-submit {
   border: none;
-  display: block;
   min-width: 169px;
   height: 56px;
   margin: 0 auto;
