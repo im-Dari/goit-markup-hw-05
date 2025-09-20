@@ -737,6 +737,12 @@ color: #2e2f42;
   flex-direction: column;
   gap: 8px;
 }
+.modal-form > .modal-field:first-child {
+  margin-bottom: 8px;  }
+
+.modal-form > .modal-field:nth-child(4) {
+  margin-bottom: 16px;}
+
 
 .modal-label {
   font-size: 12px;
@@ -864,7 +870,7 @@ color: #2e2f42;
 
 
 .checkbox-span {
-  display: inline-flex;
+  display: inline-flex !important;
    align-items: center;
   justify-content: center;
   width: 16px;
